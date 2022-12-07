@@ -1,16 +1,15 @@
 spring:
   profiles:
-    active: dev
+    active: test
 ---
-
-server:
-  port: 7001
-
 spring:
   profiles: dev
   application:
     name: springcloud-config-eureka-dev
-
+    
+server:
+  port: 7001
+  
 eureka:
   instance:
     #    eureka 服务器的实例名称:在系统文件的hosts.etc文件下做了映射配置
@@ -25,14 +24,14 @@ eureka:
       defaultZone: http://eureka7002.com:7002/eureka, http://eureka7003.com:7003/eureka
 
 ---
-server:
-  port: 7001
-
 spring:
   profiles: test
   application:
     name: springcloud-config-eureka-test
-
+    
+server:
+  port: 7001
+  
 eureka:
   instance:
     #    eureka 服务器的实例名称:在系统文件的hosts.etc文件下做了映射配置
