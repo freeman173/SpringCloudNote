@@ -1,18 +1,18 @@
 spring:
   profiles:
-    active: dev
+    active: test
 
 ---
-server:
-  port: 8201
-
 #dev配置
 spring:
   profiles:
     active: dev
   application:
-    name: springcloud-provider-dept
+    name: springcloud-provider-dept-dev
 
+server:
+  port: 8201
+  
 #eureka的客户端配置
 eureka:
   client:
@@ -20,15 +20,16 @@ eureka:
       defaultZone: http://eureka7001.com:7001/eureka
 
 ---
-server:
-  port: 8202
 #test配置
 spring:
   profiles:
     active: test
   application:
-    name: springcloud-provider-dept
-
+    name: springcloud-provider-dept-test
+    
+server:
+  port: 8202
+  
 #eureka的客户端配置
 eureka:
   client:
