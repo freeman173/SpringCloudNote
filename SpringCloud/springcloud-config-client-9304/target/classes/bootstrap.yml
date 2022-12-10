@@ -1,0 +1,11 @@
+#专门配置系统级别的信息
+#访问设置
+spring:
+  cloud:
+    config:
+      name: config-client
+      profile: dev
+#      github仓库分支名
+      label: master
+      uri: http://localhost:9303
+

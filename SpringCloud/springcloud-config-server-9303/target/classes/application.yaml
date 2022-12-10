@@ -1,0 +1,15 @@
+server:
+  port: 9303
+
+spring:
+  application:
+    name: springcloud-config-server-9303
+#    配置连接远程仓库
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/freeman173/SpringCloudTest.git
+
+
+

@@ -1,0 +1,9 @@
+
+#配置用户级信息
+#server:
+#  port: 9304
+
+spring:
+  application:
+    name: springcloud-config-client-9304
+

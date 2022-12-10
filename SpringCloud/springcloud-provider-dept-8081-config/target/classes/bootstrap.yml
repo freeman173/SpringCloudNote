@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: config-dept
+      #      github仓库分支名
+      label: master
+      uri: http://localhost:9303

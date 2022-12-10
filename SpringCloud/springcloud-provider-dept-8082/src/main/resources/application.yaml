@@ -1,0 +1,41 @@
+
+spring:
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    password: 123456
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+server:
+  port: 8082
+
+
+#整合mybatis
+mybatis:
+  type-aliases-package: com.example.demo5.mapper
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+  config-location: classpath:mybatis/mybatis_config.xml
+
+
+
+#eureka的客户端配置
+eureka:
+  client:
+    #向eureka注册自己
+    register-with-eureka: true
+    #    监控页面
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  #这服务实例的名字
+  instance:
+    instance-id: springcloud-provider-dept-8082
+
+
+#服务实例的一些信息
+info:
+  app.name: jc-springcloud
+  company.name: jcbaba
